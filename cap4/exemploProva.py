@@ -23,5 +23,7 @@ print("Numero de países na América do Norte:",np.count_nonzero(arrNorthAmerica
 
 #5)
 arrSouthAmericaAndCaribean = arr[arr[:,1] == 'LATIN AMER. & CARIB    ']
-print(np.max(arrSouthAmericaAndCaribean[1:,8].astype(float)))
+arrMaxGDP = np.max(arrSouthAmericaAndCaribean[1:,8].astype(float))
+cond = arrSouthAmericaAndCaribean[1:,8].astype(float) == arrMaxGDP
+print("O nome do país com o maior GDP da América do Sul e Caribe é:",arrSouthAmericaAndCaribean[1:,0][cond])
 
