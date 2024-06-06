@@ -6,7 +6,7 @@ df = pd.read_csv('cap5/paises.csv', delimiter=';')
 # 1. a) 
 oceania = df[df['Region'].str.contains('OCEANIA')]
 print(oceania['Country'])
-# #b)
+#b)
 print(oceania['Country'].count())
 
 #2
